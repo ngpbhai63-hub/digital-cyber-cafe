@@ -1,43 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Cyber Cafe | Online Services</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Digital Cyber Cafe - CSC digital services, banking assistance, laptop repair, mobile repair and professional website services.">
+  <meta name="theme-color" content="#061b41">
+  <title>Digital Cyber Cafe | CSC • Banking • Laptop & Mobile Repair</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<div class="top-strip">
+  <div class="container top-strip-inner">
+    <span>⚡ Fast Service</span>
+    <span>🔒 Trusted Support</span>
+    <span>📱 Mobile Friendly</span>
+    <span>📍 Digital Services Near You</span>
+  </div>
+</div>
+
 <header class="header">
   <div class="container navbar">
-    <a href="#home" class="logo">DIGITAL <span>CYBER CAFE</span></a>
-    <nav class="nav">
+    <a href="#home" class="logo">
+      <span class="logo-main">DIGITAL</span>
+      <span class="logo-accent">CYBER CAFE</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <nav class="nav" id="navMenu">
       <a href="#home">Home</a>
-      <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#csc-banking">CSC & Banking</a>
+      <a href="#repair">Repair Center</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a href="tel:+919810252413" class="call-btn">Call Now</a>
+
+    <a href="tel:+919810252413" class="call-btn">📞 Call Now</a>
   </div>
 </header>
 
-<main>
-<section class="hero" id="home">
+<main id="home">
+
+<section class="hero">
   <div class="container hero-content">
     <div class="hero-text">
-      <p class="tagline">DIGITAL SERVICES</p>
-      <h1>Your Trusted <span>Digital Partner</span></h1>
-      <p>Professional digital, online and website development services for individuals, businesses and organizations.</p>
+      <p class="tagline">YOUR ONE-STOP DIGITAL SERVICE CENTER</p>
+      <h1>CSC, Banking & <span>Repair Solutions</span></h1>
+      <p class="hero-lead">एक ही जगह पर CSC related digital services, banking assistance, laptop repair, mobile repair और professional website services.</p>
       <div class="hero-buttons">
-        <a href="#services" class="btn primary">Our Services</a>
-        <a href="https://wa.me/919810252413?text=Hello%20I%20want%20a%20website" target="_blank" class="btn whatsapp">WhatsApp Now</a>
+        <a href="#services" class="btn primary">Explore Services</a>
+        <a href="https://wa.me/919810252413?text=Hello%20Digital%20Cyber%20Cafe%2C%20I%20need%20a%20service." target="_blank" rel="noopener" class="btn whatsapp">💬 WhatsApp</a>
+      </div>
+      <div class="hero-points">
+        <span>✓ Transparent Service</span>
+        <span>✓ Quick Assistance</span>
+        <span>✓ Home/Business Support</span>
       </div>
     </div>
-    <div class="hero-image">
-      <div class="website-card">
-        <h3>Digital Cyber Cafe</h3>
-        <p>Fast • Reliable • Professional</p>
-        <a href="#contact" class="btn primary">Contact Us</a>
+
+    <div class="hero-visual">
+      <div class="hero-main-card">
+        <div class="floating-badge badge-one">🏛️ CSC</div>
+        <div class="floating-badge badge-two">🏦 Banking</div>
+        <div class="floating-badge badge-three">💻 Laptop</div>
+        <div class="floating-badge badge-four">📱 Mobile</div>
+        <div class="device-panel">
+          <div class="device-top">
+            <span class="status-dot"></span>
+            <span>Digital Service Hub</span>
+          </div>
+          <div class="device-content">
+            <div class="big-icon">🧑‍💻</div>
+            <h3>Digital Cyber Cafe</h3>
+            <p>CSC • Banking • Repair • Web Services</p>
+            <a href="#contact" class="mini-btn">Get Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quick-services">
+  <div class="container quick-grid">
+    <a href="#csc-banking" class="quick-card"><span>🏛️</span><div><strong>CSC Services</strong><small>Online & citizen services</small></div></a>
+    <a href="#csc-banking" class="quick-card"><span>🏦</span><div><strong>Banking</strong><small>Financial service assistance</small></div></a>
+    <a href="#repair" class="quick-card"><span>💻</span><div><strong>Laptop Repair</strong><small>Hardware & software support</small></div></a>
+    <a href="#repair" class="quick-card"><span>📱</span><div><strong>Mobile Repair</strong><small>Display, battery & software</small></div></a>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-heading">
+      <p>OUR SERVICES</p>
+      <h2>Complete Digital & Technical Solutions</h2>
+      <span>एक modern service center जहाँ digital काम और device repair दोनों मिलते हैं।</span>
+    </div>
+
+    <div class="filter-bar" role="tablist" aria-label="Service filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="csc">CSC</button>
+      <button class="filter-btn" data-filter="banking">Banking</button>
+      <button class="filter-btn" data-filter="laptop">Laptop</button>
+      <button class="filter-btn" data-filter="mobile">Mobile</button>
+      <button class="filter-btn" data-filter="web">Website</button>
+    </div>
+
+    <div class="services-grid advanced-grid" id="serviceGrid">
+      <article class="service-card service-csc" data-category="csc">
+        <div class="service-head"><div class="service-icon">🏛️</div><span class="service-tag">CSC</span></div>
+        <h3>CSC & Citizen Services</h3>
+        <p>Citizen-focused digital assistance और online application support.</p>
+        <ul><li>PAN / online application assistance</li><li>Government portal form support</li><li>Certificate / document assistance</li><li>Bill payment & utility services</li><li>Printing, scanning & document work</li></ul>
+        <a href="#contact" class="service-btn">CSC Service लें →</a>
+      </article>
+
+      <article class="service-card service-banking" data-category="banking">
+        <div class="service-head"><div class="service-icon">🏦</div><span class="service-tag">BANKING</span></div>
+        <h3>Banking Assistance</h3>
+        <p>Banking और financial service assistance, उपलब्धता/authorization के अनुसार.</p>
+        <ul><li>Cash withdrawal / deposit assistance</li><li>Balance enquiry & mini statement</li><li>Domestic money transfer support</li><li>Account/service request assistance</li><li>Digital payment support</li></ul>
+        <a href="#contact" class="service-btn">Banking पूछें →</a>
+      </article>
+
+      <article class="service-card service-laptop" data-category="laptop">
+        <div class="service-head"><div class="service-icon">💻</div><span class="service-tag">LAPTOP</span></div>
+        <h3>Laptop Repair Center</h3>
+        <p>Laptop की hardware, software और performance related समस्याओं का समाधान.</p>
+        <ul><li>Windows installation & setup</li><li>SSD / RAM upgrade</li><li>Keyboard / battery replacement</li><li>Heating & performance issues</li><li>Data backup & software support</li></ul>
+        <a href="#contact" class="service-btn">Repair Book करें →</a>
+      </article>
+
+      <article class="service-card service-mobile" data-category="mobile">
+        <div class="service-head"><div class="service-icon">📱</div><span class="service-tag">MOBILE</span></div>
+        <h3>Mobile Repair Center</h3>
+        <p>Smartphone repair, software support और common part replacement.</p>
+        <ul><li>Display / touch replacement</li><li>Battery replacement</li><li>Charging port issues</li><li>Software / update support</li><li>Speaker, mic & camera issues</li></ul>
+        <a href="#contact" class="service-btn">Mobile Repair →</a>
+      </article>
+
+      <article class="service-card service-web" data-category="web">
+        <div class="service-head"><div class="service-icon">🌐</div><span class="service-tag">WEB</span></div>
+        <h3>Business Website</h3>
+        <p>Local business, shop, institute या service provider के लिए modern website.</p>
+        <ul><li>Responsive design</li><li>WhatsApp / call buttons</li><li>Services & contact pages</li><li>SEO-friendly structure</li><li>Fast hosting deployment</li></ul>
+        <div class="price">Starting ₹2,999/-</div>
+        <a href="#contact" class="service-btn">Website बनवाएँ →</a>
+      </article>
+
+      <article class="service-card service-csc" data-category="csc">
+        <div class="service-head"><div class="service-icon">🖨️</div><span class="service-tag">DIGITAL</span></div>
+        <h3>Print, Scan & Online Work</h3>
+        <p>Daily digital-cafe जरूरतों के लिए fast document और online support.</p>
+        <ul><li>Print / scan / photocopy</li><li>Photo & PDF work</li><li>Online form filling</li><li>Document upload assistance</li><li>Email / file support</li></ul>
+        <a href="#contact" class="service-btn">काम शुरू करें →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="split-section" id="csc-banking">
+  <div class="container split-grid">
+    <div class="split-content">
+      <p class="section-label">CSC + BANKING DESK</p>
+      <h2>Digital Services Made <span>Simple</span></h2>
+      <p>हम customers को online forms, citizen services, document work और banking assistance एक professional setup में उपलब्ध कराने पर focus करते हैं.</p>
+      <div class="feature-list">
+        <div><span>01</span><p><strong>CSC Desk</strong><br>Online applications, documents और citizen service assistance.</p></div>
+        <div><span>02</span><p><strong>Banking Desk</strong><br>Available authorized banking/financial services के लिए assistance.</p></div>
+        <div><span>03</span><p><strong>Document Desk</strong><br>Print, scan, PDF, photo और upload related work.</p></div>
+      </div>
+      <a href="https://wa.me/919810252413?text=Hello%20Digital%20Cyber%20Cafe%2C%20I%20need%20CSC%20or%20Banking%20service." target="_blank" rel="noopener" class="btn primary">Ask on WhatsApp</a>
+    </div>
+    <div class="dashboard-card">
+      <div class="dashboard-top"><span>Service Dashboard</span><span class="live-pill">● LIVE</span></div>
+      <div class="dashboard-stats">
+        <div><strong>CSC</strong><span>Digital Help</span></div>
+        <div><strong>Bank</strong><span>Assistance</span></div>
+        <div><strong>Docs</strong><span>Print/Scan</span></div>
+        <div><strong>24/7</strong><span>Support</span></div>
+      </div>
+      <div class="dashboard-note">🔐 Customer documents should always be handled securely and only for the requested service.</div>
+    </div>
+  </div>
+</section>
+
+<section class="repair-section" id="repair">
+  <div class="container">
+    <div class="section-heading">
+      <p>REPAIR CENTER</p>
+      <h2>Laptop & Mobile Repair</h2>
+      <span>Diagnosis से लेकर replacement और software support तक.</span>
+    </div>
+    <div class="repair-grid">
+      <div class="repair-card laptop-repair">
+        <div class="repair-icon">💻</div>
+        <h3>Laptop Repair</h3>
+        <p>Slow laptop, hanging, no display, charging, keyboard, battery, SSD/RAM या Windows issues.</p>
+        <div class="repair-pills"><span>SSD / RAM</span><span>Battery</span><span>Windows</span><span>Keyboard</span></div>
+        <a href="https://wa.me/919810252413?text=Hello%20I%20need%20laptop%20repair." target="_blank" rel="noopener" class="repair-link">Book Laptop Repair →</a>
+      </div>
+      <div class="repair-card mobile-repair">
+        <div class="repair-icon">📱</div>
+        <h3>Mobile Repair</h3>
+        <p>Display, battery, charging port, speaker, mic, camera और software related common problems.</p>
+        <div class="repair-pills"><span>Display</span><span>Battery</span><span>Charging</span><span>Software</span></div>
+        <a href="https://wa.me/919810252413?text=Hello%20I%20need%20mobile%20repair." target="_blank" rel="noopener" class="repair-link">Book Mobile Repair →</a>
       </div>
     </div>
   </div>
@@ -46,17 +217,17 @@
 <section class="about" id="about">
   <div class="container about-grid">
     <div class="about-content">
-      <p class="section-label">ABOUT US</p>
+      <p class="section-label">ABOUT DIGITAL CYBER CAFE</p>
       <h2>Your Trusted <span>Digital Partner</span></h2>
-      <p>Digital Cyber Cafe provides reliable digital, online and website development services for individuals, businesses and organizations.</p>
-      <p>हमारा उद्देश्य लोगों और businesses को आसान, तेज़ और professional digital services उपलब्ध कराना है।</p>
-      <a href="#contact" class="btn primary">Contact Us</a>
+      <p>Digital Cyber Cafe एक all-in-one service center concept है जहाँ customers को digital services, CSC related assistance, banking support और device repair services एक ही जगह पर मिलती हैं.</p>
+      <p>हमारा focus है clear communication, quick assistance और customer-friendly service experience.</p>
+      <a href="#contact" class="btn primary">Talk to Us</a>
     </div>
     <div class="about-box">
-      <div class="about-item"><strong>5+</strong><span>Years Experience</span></div>
-      <div class="about-item"><strong>500+</strong><span>Happy Customers</span></div>
-      <div class="about-item"><strong>100+</strong><span>Websites Created</span></div>
-      <div class="about-item"><strong>24/7</strong><span>Digital Support</span></div>
+      <div class="about-item"><strong>4+</strong><span>Main Service Categories</span></div>
+      <div class="about-item"><strong>1</strong><span>One-Stop Service Desk</span></div>
+      <div class="about-item"><strong>100%</strong><span>Customer Focus</span></div>
+      <div class="about-item"><strong>Fast</strong><span>Service Assistance</span></div>
     </div>
   </div>
 </section>
@@ -65,14 +236,14 @@
   <div class="container">
     <div class="section-heading">
       <p>WHY CHOOSE US</p>
-      <h2>Why Customers Choose Us</h2>
-      <span>Professional service with reliable support.</span>
+      <h2>Professional Service Experience</h2>
+      <span>हर service को simple, clear और convenient बनाने की कोशिश.</span>
     </div>
     <div class="why-grid">
-      <div class="why-card"><div>⚡</div><h3>Fast Service</h3><p>हम आपके काम को समय पर पूरा करने की कोशिश करते हैं।</p></div>
-      <div class="why-card"><div>💻</div><h3>Modern Technology</h3><p>Latest web technologies और modern design का इस्तेमाल।</p></div>
-      <div class="why-card"><div>📱</div><h3>Mobile Friendly</h3><p>Website mobile, tablet और desktop सभी devices पर responsive।</p></div>
-      <div class="why-card"><div>🤝</div><h3>Customer Support</h3><p>Website launch के बाद भी support और maintenance उपलब्ध।</p></div>
+      <div class="why-card"><div>⚡</div><h3>Fast Service</h3><p>जरूरी digital और repair काम के लिए quick assistance.</p></div>
+      <div class="why-card"><div>🛡️</div><h3>Secure Handling</h3><p>Customer documents और data को responsibly handle करने पर focus.</p></div>
+      <div class="why-card"><div>🔧</div><h3>Repair Support</h3><p>Laptop और mobile की common hardware/software problems के लिए support.</p></div>
+      <div class="why-card"><div>🤝</div><h3>Easy Support</h3><p>Call, WhatsApp और direct enquiry के जरिए आसान communication.</p></div>
     </div>
   </div>
 </section>
@@ -80,48 +251,48 @@
 <section class="cta">
   <div class="container cta-content">
     <div>
-      <p>READY TO GROW ONLINE?</p>
-      <h2>अपने Business को Online ले जाएँ</h2>
-      <span>आज ही हमसे बात करें और अपनी website शुरू करें।</span>
+      <p>NEED A SERVICE TODAY?</p>
+      <h2>CSC से लेकर Repair तक — सब एक जगह</h2>
+      <span>अपना काम बताइए, हम आपको सही service desk तक guide करेंगे.</span>
     </div>
-    <a href="https://wa.me/919810252413?text=Hello%20I%20want%20a%20website" target="_blank" class="whatsapp-btn">💬 WhatsApp Now</a>
-  </div>
-</section>
-
-<section class="services" id="services">
-  <div class="container">
-    <div class="section-heading">
-      <p>WHAT WE OFFER</p>
-      <h2>Our Professional Services</h2>
-      <span>Digital solutions to help your business grow online.</span>
-    </div>
-    <div class="services-grid">
-      <div class="service-card"><div class="service-icon">🏢</div><h3>Business Website</h3><p>Professional website for your business, company or local service.</p><ul><li>5–7 Pages</li><li>About & Services</li><li>Contact / WhatsApp</li><li>Mobile Friendly</li><li>SEO Friendly</li></ul><div class="price">Starting ₹2,999/-</div><a href="#contact" class="service-btn">Get Started</a></div>
-      <div class="service-card"><div class="service-icon">👤</div><h3>Portfolio Website</h3><p>Showcase your skills, projects and professional work online.</p><ul><li>Home & About</li><li>Skills / Services</li><li>Gallery / Projects</li><li>Contact Section</li><li>Mobile Friendly</li></ul><div class="price">Starting ₹1,999/-</div><a href="#contact" class="service-btn">Get Started</a></div>
-      <div class="service-card"><div class="service-icon">🎓</div><h3>School / Coaching</h3><p>Modern website for schools, colleges and coaching institutes.</p><ul><li>Home & Courses</li><li>Faculty Section</li><li>Notice / Gallery</li><li>Enquiry Form</li><li>SEO Friendly</li></ul><div class="price">Starting ₹4,999/-</div><a href="#contact" class="service-btn">Get Started</a></div>
-      <div class="service-card"><div class="service-icon">🛒</div><h3>E-Commerce Website</h3><p>Complete online store to sell products and grow your business.</p><ul><li>Product Listing</li><li>Shopping Cart</li><li>Order System</li><li>Payment Integration</li><li>Customer Registration</li></ul><div class="price">Starting ₹7,999/-</div><a href="#contact" class="service-btn">Get Started</a></div>
-    </div>
+    <a href="https://wa.me/919810252413?text=Hello%20Digital%20Cyber%20Cafe%2C%20I%20need%20service." target="_blank" rel="noopener" class="whatsapp-btn">💬 WhatsApp Now</a>
   </div>
 </section>
 
 <section class="contact" id="contact">
   <div class="container">
-    <div class="section-heading"><p>GET IN TOUCH</p><h2>Contact Us</h2><span>अपने project के बारे में हमसे बात करें।</span></div>
+    <div class="section-heading">
+      <p>GET IN TOUCH</p>
+      <h2>Contact & Service Booking</h2>
+      <span>Service चुनें और अपनी requirement भेजें.</span>
+    </div>
     <div class="contact-grid">
       <div class="contact-info">
         <h3>Let's Talk</h3>
-        <p>Website, online service या किसी भी digital requirement के लिए हमसे संपर्क करें।</p>
+        <p>CSC, banking assistance, laptop repair, mobile repair या website service के लिए contact करें.</p>
         <div class="contact-item"><strong>📞 Phone</strong><a href="tel:+919810252413">+91 98102 52413</a></div>
-        <div class="contact-item"><strong>💬 WhatsApp</strong><a href="https://wa.me/919810252413">Chat on WhatsApp</a></div>
+        <div class="contact-item"><strong>💬 WhatsApp</strong><a href="https://wa.me/919810252413" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
         <div class="contact-item"><strong>📧 Email</strong><a href="mailto:info@example.com">info@example.com</a></div>
         <div class="contact-item"><strong>📍 Address</strong><span>Your Business Address, India</span></div>
+        <div class="notice-box">ℹ️ Banking/financial services only where legally authorized and available through the applicable provider.</div>
       </div>
+
       <form class="contact-form" id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="tel" id="phone" placeholder="Mobile Number" required>
+        <div class="form-row">
+          <input type="text" id="name" placeholder="Your Name" required>
+          <input type="tel" id="phone" placeholder="Mobile Number" required>
+        </div>
         <input type="email" id="email" placeholder="Email Address">
-        <select id="service" required><option value="">Select Service</option><option value="business">Business Website</option><option value="portfolio">Portfolio Website</option><option value="school">School / Coaching Website</option><option value="ecommerce">E-Commerce Website</option></select>
-        <textarea id="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+        <select id="service" required>
+          <option value="">Select Service</option>
+          <option value="csc">CSC / Citizen Service</option>
+          <option value="banking">Banking Assistance</option>
+          <option value="laptop">Laptop Repair</option>
+          <option value="mobile">Mobile Repair</option>
+          <option value="website">Website Development</option>
+          <option value="print">Print / Scan / Online Work</option>
+        </select>
+        <textarea id="message" rows="5" placeholder="Tell us about your requirement..." required></textarea>
         <button type="submit">Send Enquiry</button>
         <p id="formMessage"></p>
       </form>
@@ -129,16 +300,17 @@
   </div>
 </section>
 
-<section class="map">
-  <iframe src="https://www.google.com/maps/embed?pb=" loading="lazy" allowfullscreen></iframe>
-</section>
-
 </main>
 
 <footer class="footer">
   <div class="container footer-content">
-    <div><h3>Digital Cyber Cafe</h3><p>Your trusted digital partner.</p></div>
-    <div class="footer-links"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+    <div>
+      <a href="#home" class="footer-logo">DIGITAL <span>CYBER CAFE</span></a>
+      <p>CSC • Banking • Laptop Repair • Mobile Repair • Website Services</p>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#csc-banking">CSC & Banking</a><a href="#repair">Repair</a><a href="#contact">Contact</a>
+    </div>
   </div>
   <div class="copyright">© 2026 Digital Cyber Cafe. All Rights Reserved.</div>
 </footer>
