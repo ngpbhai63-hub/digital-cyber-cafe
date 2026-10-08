@@ -127,3 +127,28 @@ a{text-decoration:none}
 @media(max-width:900px){.hero-content,.split-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{text-align:center}.hero-lead{margin:auto}.hero-buttons,.hero-points{justify-content:center}.hero-visual{margin-top:10px}.quick-grid{grid-template-columns:repeat(2,1fr)}.repair-grid{grid-template-columns:1fr}.navbar{position:relative}.menu-toggle{display:block;margin-left:auto}.nav{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:var(--navy);padding:16px 20px;box-shadow:0 18px 35px rgba(2,14,35,.2)}.nav.open{display:flex}.call-btn{display:none}}
 @media(max-width:650px){.top-strip-inner{gap:10px;font-size:11px}.hero{padding:65px 0 58px}.hero h1{font-size:42px}.device-panel{width:300px}.floating-badge{font-size:11px;padding:9px 11px}.badge-one{left:0}.badge-two{right:0}.badge-three{left:0;bottom:45px}.badge-four{right:0;bottom:15px}.quick-grid{grid-template-columns:1fr}.services-grid{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}.about-box,.dashboard-stats,.form-row{grid-template-columns:1fr 1fr}.cta-content{flex-direction:column;text-align:center}.cta-content h2{font-size:29px}.footer-content{flex-direction:column;text-align:center}.footer-links{justify-content:center}.contact{padding:75px 0}.repair-card{min-height:300px}}
 @media(max-width:430px){.about-box,.dashboard-stats,.form-row{grid-template-columns:1fr}.hero-points{flex-direction:column;gap:8px}.device-panel{width:285px}}
+
+/* Official branding */
+.logo{align-items:center;justify-content:center;padding:2px 0}
+.logo-image{display:block;width:64px;height:64px;object-fit:contain;border-radius:50%}
+.brand-showcase{background:linear-gradient(135deg,#020817,#061b41);color:#fff;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.brand-showcase-inner{display:flex;align-items:center;justify-content:center;gap:18px;text-align:left}
+.brand-logo{width:96px;height:96px;object-fit:contain;border-radius:50%;box-shadow:0 0 30px rgba(88,101,242,.25)}
+.brand-showcase h2{font-size:30px;line-height:1.1;margin:3px 0 5px;color:#fff}
+.brand-showcase p:not(.section-label){color:#cbd5e1}
+.map-link{display:inline-block;color:var(--blue);font-weight:800;margin-top:4px}
+.map-section{padding:95px 0;background:#f7faff}
+.map-wrapper{position:relative;min-height:430px;border-radius:22px;overflow:hidden;background:#eaf2fa;box-shadow:0 18px 45px rgba(12,54,99,.12);border:1px solid #e5edf6}
+.map-wrapper iframe{width:100%;height:430px;border:0;display:block}
+.map-overlay{position:absolute;left:20px;bottom:20px;background:#fff;border:1px solid #e5edf6;border-radius:14px;padding:15px 17px;box-shadow:0 12px 30px rgba(12,54,99,.14);display:flex;flex-direction:column;gap:4px;max-width:310px}
+.map-overlay strong{color:var(--navy2);font-size:16px}
+.map-overlay span{color:#64748b;font-size:13px}
+.map-overlay a{color:var(--blue);font-weight:800;font-size:13px;margin-top:3px}
+.footer-address{margin:7px 0}
+@media(max-width:650px){
+  .brand-showcase-inner{flex-direction:column;text-align:center}
+  .brand-logo{width:86px;height:86px}
+  .logo-image{width:58px;height:58px}
+  .map-wrapper,.map-wrapper iframe{height:360px;min-height:360px}
+  .map-overlay{left:12px;right:12px;bottom:12px;max-width:none}
+}
