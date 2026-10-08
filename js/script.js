@@ -45,3 +45,17 @@ if(form){
     formMessage.innerHTML='✅ Enquiry तैयार है — WhatsApp पर भेजें: <a href="https://wa.me/919810252413?text='+text+'" target="_blank" rel="noopener">Send on WhatsApp</a>';
   });
 }
+
+// Premium UI interactions
+document.querySelectorAll("section, .quick-card, .service-card, .plan-card, .repair-card, .why-card, .contact-form").forEach(el=>{
+  if(!el.classList.contains("reveal")) el.classList.add("reveal");
+});
+const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:.08});
+document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
