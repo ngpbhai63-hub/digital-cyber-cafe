@@ -210,3 +210,42 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;bac
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
 .floating-actions{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:10px}.floating-actions a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 14px 28px rgba(0,0,0,.18);font-size:22px}.float-call{background:#0b5ea8}.float-wa{background:#20a84b}
 @media(max-width:650px){.brand-showcase{padding:11px 0}.hero{padding:72px 0 60px}.hero-points span{font-size:12px}.floating-actions{right:12px;bottom:12px}.floating-actions a{width:48px;height:48px;font-size:20px}.logo-image{width:52px;height:52px}}
+
+/* Advanced motion system */
+.hero-text>*{animation:fadeUp .8s cubic-bezier(.22,1,.36,1) both}
+.hero-text .tagline{animation-delay:.05s}.hero-text h1{animation-delay:.15s}.hero-text .hero-lead{animation-delay:.25s}.hero-text .hero-buttons{animation-delay:.35s}.hero-text .hero-points{animation-delay:.45s}
+.hero-visual{animation:heroIn 1s cubic-bezier(.22,1,.36,1) .2s both}
+.hero-main-card{animation:heroFloat 7s ease-in-out infinite}
+.device-panel{animation:deviceGlow 4s ease-in-out infinite}
+.status-dot{animation:pulseDot 1.8s ease-in-out infinite}
+.quick-card,.service-card,.plan-card,.repair-card,.why-card,.about-item,.additional-grid>div{will-change:transform}
+.reveal{opacity:0;transform:translateY(30px) scale(.985);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.reveal.visible{opacity:1;transform:none}
+.quick-card.reveal,.service-card.reveal,.plan-card.reveal,.repair-card.reveal,.why-card.reveal{transition-delay:calc(var(--i, 0) * 70ms)}
+.services-grid .service-card:nth-child(1),.plans-grid .plan-card:nth-child(1),.repair-grid .repair-card:nth-child(1),.why-grid .why-card:nth-child(1),.quick-grid .quick-card:nth-child(1){--i:1}
+.services-grid .service-card:nth-child(2),.plans-grid .plan-card:nth-child(2),.repair-grid .repair-card:nth-child(2),.why-grid .why-card:nth-child(2),.quick-grid .quick-card:nth-child(2){--i:2}
+.services-grid .service-card:nth-child(3),.plans-grid .plan-card:nth-child(3),.why-grid .why-card:nth-child(3),.quick-grid .quick-card:nth-child(3){--i:3}
+.services-grid .service-card:nth-child(4),.plans-grid .plan-card:nth-child(4),.why-grid .why-card:nth-child(4),.quick-grid .quick-card:nth-child(4){--i:4}
+.services-grid .service-card:nth-child(5),.plans-grid .plan-card:nth-child(5){--i:5}
+.services-grid .service-card:nth-child(6),.plans-grid .plan-card:nth-child(6){--i:6}
+.service-card,.plan-card,.repair-card,.why-card{transform-origin:center bottom}
+.filter-btn{position:relative;overflow:hidden}
+.filter-btn:after,.plan-btn:after,.service-btn:after,.btn:after,.whatsapp-btn:after{content:"";position:absolute;inset:-70% -30%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.23),transparent);transform:translateX(-120%) rotate(12deg);transition:transform .7s ease;pointer-events:none}
+.filter-btn,.plan-btn,.service-btn,.btn,.whatsapp-btn{position:relative;overflow:hidden}
+.filter-btn:hover:after,.plan-btn:hover:after,.service-btn:hover:after,.btn:hover:after,.whatsapp-btn:hover:after{transform:translateX(120%) rotate(12deg)}
+.nav a{position:relative}.nav a:after{content:"";position:absolute;left:10px;right:10px;bottom:3px;height:2px;background:var(--yellow);transform:scaleX(0);transform-origin:center;transition:.25s}.nav a:hover:after{transform:scaleX(1)}
+.hero-points span{animation:softIn .7s ease both}.hero-points span:nth-child(2){animation-delay:.1s}.hero-points span:nth-child(3){animation-delay:.2s}
+.floating-badge{box-shadow:0 14px 30px rgba(9,53,100,.14),0 0 0 0 rgba(8,121,209,.12)}
+.floating-badge:hover{transform:translateY(-9px) scale(1.04)!important;box-shadow:0 18px 35px rgba(9,53,100,.2)}
+.map-overlay{animation:mapPop .8s cubic-bezier(.22,1,.36,1) .3s both}
+.floating-actions a{transition:transform .25s ease,box-shadow .25s ease}.floating-actions a:hover{transform:translateY(-5px) scale(1.06);box-shadow:0 18px 35px rgba(0,0,0,.24)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes heroIn{from{opacity:0;transform:translateX(28px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes deviceGlow{0%,100%{box-shadow:0 30px 80px rgba(5,50,95,.20)}50%{box-shadow:0 34px 90px rgba(8,121,209,.27)}}
+@keyframes pulseDot{0%,100%{transform:scale(1);box-shadow:0 0 0 0 rgba(32,168,75,.25)}50%{transform:scale(1.15);box-shadow:0 0 0 8px rgba(32,168,75,0)}}
+@keyframes softIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes mapPop{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+}
