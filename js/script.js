@@ -78,3 +78,34 @@ document.querySelectorAll(".section,.service-row,.plan-card,.repair-card,.about-
   el.style.transitionDelay=Math.min(i*45,280)+"ms";
   revealObserver.observe(el);
 });
+
+// Jan Seva search and category filters
+const janSearch=document.getElementById("janSearch");
+const janFilters=document.querySelectorAll(".jan-filter");
+const janCards=document.querySelectorAll(".jan-card");
+const janNoResults=document.getElementById("janNoResults");
+let janCategory="all";
+
+function applyJanFilters(){
+  const q=(janSearch?.value || "").trim().toLowerCase();
+  let shown=0;
+  janCards.forEach(card=>{
+    const category=card.dataset.janCategory || "";
+    const hay=(card.dataset.janSearch || "")+" "+card.textContent.toLowerCase();
+    const categoryOk=janCategory==="all" || category===janCategory;
+    const searchOk=!q || hay.includes(q);
+    const visible=categoryOk && searchOk;
+    card.classList.toggle("hidden",!visible);
+    if(visible) shown++;
+  });
+  if(janNoResults) janNoResults.hidden=shown!==0;
+}
+janFilters.forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    janFilters.forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    janCategory=btn.dataset.janFilter || "all";
+    applyJanFilters();
+  });
+});
+if(janSearch) janSearch.addEventListener("input",applyJanFilters);
