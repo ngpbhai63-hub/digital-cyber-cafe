@@ -215,3 +215,12 @@ overflow:hidden}
 .repair-service-card:hover:after,.jan-card:hover:after,.plan-card:hover:after,.service-row:hover:after{opacity:.12;transform:scale(1.03);transition:.35s ease}
 .service-row,.jan-card,.plan-card,.repair-service-card{background-color:rgba(255,255,255,.96);backdrop-filter:blur(1px)}
 @media(max-width:900px){.services,.jan-seva,.website-plans,.repair{background-attachment:scroll}.services:before,.jan-seva:before,.website-plans:before,.repair:before{opacity:.08}}
+
+/* Clearer, professional service imagery */
+.services:before,.jan-seva:before,.website-plans:before,.repair:before{opacity:.23;filter:saturate(1.05) contrast(1.02)}
+.service-row,.jan-card,.plan-card,.repair-service-card{background:rgba(255,255,255,.91);backdrop-filter:blur(2px)}
+.service-row:hover,.jan-card:hover,.plan-card:hover,.repair-service-card:hover{background:rgba(255,255,255,.95)}
+.service-row:after,.jan-card:after,.plan-card:after,.repair-service-card:after{opacity:.13;background-size:270px auto;mix-blend-mode:multiply}
+.service-row:hover:after,.jan-card:hover:after,.plan-card:hover:after,.repair-service-card:hover:after{opacity:.20}
+@media(max-width:900px){.services:before,.jan-seva:before,.website-plans:before,.repair:before{opacity:.16}}
+@media(max-width:650px){.service-row,.jan-card,.plan-card,.repair-service-card{background:rgba(255,255,255,.94)}}
