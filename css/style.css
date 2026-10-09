@@ -249,3 +249,39 @@ overflow:hidden}
 .services:before,.jan-seva:before,.website-plans:before,.repair:before{display:none}
 @media(max-width:1000px){.services,.jan-seva,.website-plans,.repair{background-size:25% auto,25% auto,auto;background-position:left center,right center,center}}
 @media(max-width:700px){.services,.jan-seva,.website-plans,.repair{background-image:none;background-size:auto;background-position:center;background-attachment:scroll}}
+
+
+/* Full-page colorful work imagery - inspired by the supplied reference */
+:root{--ref-blue:#1262b3;--ref-cyan:#08a6d9;--ref-red:#ef3b2d;--ref-orange:#f49a18;--ref-green:#149b59;--ref-purple:#6c2bbd}
+.section{position:relative;overflow:hidden}
+.section:before{content:"";position:absolute;inset:0;z-index:-2;opacity:.18;background-repeat:no-repeat;background-position:left center,right center;background-size:25% auto,25% auto;pointer-events:none}
+.section:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(248,251,254,.18),rgba(255,255,255,.96) 27%,rgba(255,255,255,.96) 73%,rgba(248,251,254,.18))}
+.services:before{background-image:url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=850&q=85"),url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=850&q=85")}
+.jan-seva:before{background-image:url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=850&q=85"),url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=850&q=85")}
+.website-plans:before{background-image:url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=850&q=85"),url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=850&q=85")}
+.csc-banking:before{background-image:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=850&q=85"),url("https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=850&q=85")}
+.repair:before{background-image:url("https://images.unsplash.com/photo-1593642632559-0c6d3fc2d7c5?auto=format&fit=crop&w=850&q=85"),url("https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=850&q=85")}
+.about:before{background-image:url("https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=850&q=85"),url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=850&q=85")}
+.contact:before{background-image:url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=850&q=85"),url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=850&q=85")}
+.location:before{background-image:url("https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=850&q=85"),url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=850&q=85")}
+.jan-card,.service-row,.plan-card,.repair-service-card,.contact-form,.feature-box,.about-card>div{backdrop-filter:blur(2px)}
+.services,.jan-seva,.website-plans,.csc-banking,.repair,.about,.contact,.location{background-color:#f8fbfe!important;background-image:none!important}
+.section-heading{position:relative}
+.section-heading:after{content:"";display:block;width:54px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--ref-blue),var(--ref-cyan),var(--ref-orange));margin:13px auto 0}
+.section-heading.left:after{margin-left:0}
+.eyebrow{color:var(--ref-blue)!important}
+.service-row:nth-child(1) .service-row-icon{background:#eaf5ff;color:var(--ref-blue)}
+.service-row:nth-child(2) .service-row-icon{background:#eefbf4;color:var(--ref-green)}
+.service-row:nth-child(3) .service-row-icon{background:#fff1e6;color:var(--ref-orange)}
+.service-row:nth-child(4) .service-row-icon{background:#f4ebff;color:var(--ref-purple)}
+.service-row:nth-child(5) .service-row-icon{background:#e7f8fa;color:#008caa}
+.service-row:nth-child(6) .service-row-icon{background:#fff0ee;color:var(--ref-red)}
+.jan-icon{box-shadow:inset 0 0 0 1px rgba(18,98,179,.05)}
+.jan-card:nth-child(4n+1) .jan-icon{background:#eaf5ff}.jan-card:nth-child(4n+2) .jan-icon{background:#fff1e8}.jan-card:nth-child(4n+3) .jan-icon{background:#eaf9f0}.jan-card:nth-child(4n) .jan-icon{background:#f4ecff}
+.plan-card.blue{border-top:6px solid var(--ref-blue)}.plan-card.purple{border-top:6px solid var(--ref-purple)}.plan-card.green{border-top:6px solid var(--ref-green)}.plan-card.orange{border-top:6px solid var(--ref-orange)}
+.plan-card.blue .plan-btn{background:var(--ref-blue)}.plan-card.purple .plan-btn{background:var(--ref-purple)}.plan-card.green .plan-btn{background:var(--ref-green)}.plan-card.orange .plan-btn{background:var(--ref-orange)}
+.repair-service-card:nth-child(4n+1) .repair-service-icon{background:#eaf5ff}.repair-service-card:nth-child(4n+2) .repair-service-icon{background:#fff1e8}.repair-service-card:nth-child(4n+3) .repair-service-icon{background:#eaf9f0}.repair-service-card:nth-child(4n) .repair-service-icon{background:#f4ecff}
+.map-button{border-left:4px solid var(--ref-red)}
+.floating-actions a{border:2px solid #fff}
+@media(max-width:900px){.section:before{background-size:19% auto,19% auto;opacity:.12}.section:after{background:linear-gradient(90deg,rgba(248,251,254,.45),rgba(255,255,255,.97) 18%,rgba(255,255,255,.97) 82%,rgba(248,251,254,.45))}}
+@media(max-width:700px){.section:before,.section:after{display:none}.services,.jan-seva,.website-plans,.csc-banking,.repair,.about,.contact,.location{background-color:#fff!important}}
