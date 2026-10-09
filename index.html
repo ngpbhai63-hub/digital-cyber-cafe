@@ -46,98 +46,33 @@
 
 <section class="reference-banner" aria-label="Digital Cyber Cafe service center preview">
   <div class="reference-banner-inner">
-    <img src="assets/digital-cyber-cafe-homepage.jpg" alt="Digital Cyber Cafe Jan Seva Kendra, Website Design and Laptop Repair services" loading="eager">
+    <img id="referenceBannerImage" alt="Digital Cyber Cafe Jan Seva Kendra, Website Design and Laptop Repair services" loading="eager">
+    <div id="referenceBannerFallback" aria-hidden="true">Loading Digital Cyber Cafe preview…</div>
   </div>
 </section>
+<script>
+(async()=>{
+  const parts=["01","02","03","04","05"];
+  try{
+    const data=await Promise.all(parts.map(n=>fetch("assets/reference-parts/"+n+".txt",{cache:"force-cache"}).then(r=>{
+      if(!r.ok) throw new Error("Reference image part "+n+" failed");
+      return r.text();
+    })));
+    document.getElementById("referenceBannerImage").src="data:image/webp;base64,"+data.join("");
+    document.getElementById("referenceBannerFallback").remove();
+  }catch(e){
+    document.getElementById("referenceBannerFallback").textContent="Digital Cyber Cafe";
+  }
+})();
+</script>
 <style>
 .reference-banner{background:linear-gradient(180deg,#eef7ff 0%,#ffffff 100%);padding:10px 14px 16px;border-bottom:1px solid #dbe8f3}
 .reference-banner-inner{max-width:1280px;margin:0 auto;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 16px 40px rgba(12,58,101,.14);border:1px solid #dbe6ef}
 .reference-banner img{display:block;width:100%;height:auto;max-height:700px;object-fit:contain}
+#referenceBannerFallback{min-height:260px;display:grid;place-items:center;color:#1262b3;font-weight:800;font-size:20px}
 @media(max-width:650px){.reference-banner{padding:6px;background:#fff}.reference-banner-inner{border-radius:8px;box-shadow:none}}
 </style>
 
-<section class="lead-hero reference-hero">
-  <div class="reference-side reference-left">
-    <div class="side-badge">🏛️ JAN SEVA</div>
-    <div class="side-list">
-      <span>🪪 Aadhaar / PAN</span>
-      <span>🗳️ Voter ID</span>
-      <span>📜 Certificates</span>
-      <span>📝 Online Forms</span>
-      <span>🖨️ Print & Scan</span>
-    </div>
-  </div>
-
-  <div class="reference-side reference-right">
-    <div class="repair-visual-label">💻 LAPTOP REPAIR</div>
-    <div class="repair-visual-label">🧩 SOFTWARE INSTALLATION</div>
-    <div class="repair-visual-label">🛠️ HARDWARE SUPPORT</div>
-    <div class="repair-visual-label">📶 WI-FI / PRINTER SETUP</div>
-  </div>
-
-  <div class="reference-glow"></div>
-  <div class="container reference-inner">
-    <div class="reference-main">
-      <div class="reference-kicker">WELCOME TO DIGITAL CYBER CAFE</div>
-      <h1><span>Jan Seva Kendra</span><br>& Digital Service Center</h1>
-      <div class="reference-highlight">आपकी सुविधाओं का एक ही स्थान</div>
-      <p class="reference-copy">CSC, Jan Seva, online forms, banking assistance, website development, laptop repair और mobile repair — एक ही professional service center पर।</p>
-
-      <div class="reference-checks">
-        <span>✓ सरकारी / नागरिक सेवाएँ</span>
-        <span>✓ ऑनलाइन फॉर्म</span>
-        <span>✓ दस्तावेज़ काम</span>
-        <span>✓ वेबसाइट बनवाएँ</span>
-        <span>✓ लैपटॉप रिपेयर</span>
-        <span>✓ सभी डिजिटल सेवाएँ</span>
-      </div>
-
-      <div class="reference-contact">
-        <a href="tel:+919810252413"><strong>☎ +91 98102 52413</strong><small>CALL NOW</small></a>
-        <a href="https://wa.me/919810252413" target="_blank" rel="noopener"><strong>💬 WhatsApp</strong><small>CHAT WITH US</small></a>
-        <a href="https://maps.app.goo.gl/vUqUHqxQ2ThTTzFRA" target="_blank" rel="noopener"><strong>📍 Visit Us</strong><small>DLF PHASE 1, GURUGRAM</small></a>
-      </div>
-    </div>
-
-    <div class="consult-card reference-consult">
-      <div class="consult-ribbon">FREE CONSULTATION</div>
-      <h2>Get A Free Consultation</h2>
-      <div class="form-line"></div>
-      <form id="heroForm">
-        <input type="text" id="heroName" placeholder="Enter Full Name" required>
-        <input type="email" id="heroEmail" placeholder="Email Address">
-        <input type="tel" id="heroPhone" placeholder="Mobile Number" required>
-        <input type="text" id="heroCity" placeholder="Your City">
-        <select id="heroService" required>
-          <option value="">What service do you need?</option>
-          <option value="Jan Seva / CSC">Jan Seva / CSC</option>
-          <option value="Business Website">Business Website</option>
-          <option value="Portfolio Website">Portfolio Website</option>
-          <option value="School / Coaching Website">School / Coaching Website</option>
-          <option value="E-Commerce Website">E-Commerce Website</option>
-          <option value="Banking Assistance">Banking Assistance</option>
-          <option value="Laptop Repair">Laptop Repair</option>
-          <option value="Software Installation">Software Installation</option>
-          <option value="Mobile Repair">Mobile Repair</option>
-        </select>
-        <textarea id="heroMessageInput" rows="3" placeholder="Message / Requirement (optional)"></textarea>
-        <button type="submit" class="consult-btn">GET MY FREE CONSULTATION <span>→</span></button>
-        <p id="heroMessage"></p>
-      </form>
-    </div>
-  </div>
-
-  <div class="popular-strip">
-    <div class="container popular-grid">
-      <a href="#jan-seva" class="popular-card pop-blue"><span>🏛️</span><b>Jan Seva Kendra</b><small>सरकारी व नागरिक सेवाएँ</small></a>
-      <a href="#web-plans" class="popular-card pop-green"><span>🌐</span><b>Website Design</b><small>Business & Personal Websites</small></a>
-      <a href="#repair" class="popular-card pop-red"><span>💻</span><b>Laptop Repair</b><small>Repair & Software Installation</small></a>
-      <a href="#services" class="popular-card pop-orange"><span>📝</span><b>Online Forms</b><small>Education, Job & Applications</small></a>
-      <a href="#csc-banking" class="popular-card pop-purple"><span>💳</span><b>Payments & Banking</b><small>Digital & Banking Assistance</small></a>
-      <a href="#repair" class="popular-card pop-cyan"><span>📱</span><b>Mobile Repair</b><small>Display, Battery & Software</small></a>
-    </div>
-  </div>
-</section>
 <section class="trust-strip">
   <div class="container trust-grid">
     <div><strong>10+</strong><span>Service Categories</span></div>
