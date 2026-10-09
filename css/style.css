@@ -945,3 +945,65 @@ radial-gradient(circle at 92% 50%,rgba(239,59,45,.07),transparent 28%)!important
   .jan-card--visual .service-thumb{width:92px!important;height:104px!important}
   .jan-card--visual>a{grid-column:2;justify-self:start}
 }
+
+/* ===== Keep Jan Seva side cards inside the white margins without covering text ===== */
+.jan-seva{position:relative!important;overflow:visible!important}
+.jan-seva>.container{position:relative!important;z-index:3!important}
+.jan-side-visuals{
+  position:absolute!important;
+  top:300px!important;
+  width:100px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  gap:10px!important;
+  z-index:2!important;
+  pointer-events:none!important;
+}
+.jan-side-left{left:-108px!important}
+.jan-side-right{right:-108px!important}
+.jan-side-visuals .side-visual-head{
+  padding:8px!important;
+  border-radius:10px!important;
+  box-shadow:0 7px 16px rgba(18,58,99,.08)!important;
+}
+.jan-side-visuals .side-visual-head b{font-size:8px!important;line-height:1.2}
+.jan-side-visuals .side-visual-head span{font-size:7px!important}
+.jan-side-visuals .id-visual{
+  width:100%!important;
+  min-height:82px!important;
+  padding:7px!important;
+  border-radius:9px!important;
+  transform:none!important;
+}
+.jan-side-visuals .id-top{
+  padding:4px 5px!important;
+  margin:-7px -7px 7px!important;
+  font-size:6px!important;
+}
+.jan-side-visuals .id-top b{font-size:6px!important}
+.jan-side-visuals .id-body{gap:6px!important}
+.jan-side-visuals .id-body strong{font-size:8px!important}
+.jan-side-visuals .id-body small,
+.jan-side-visuals .id-body em{font-size:6px!important;line-height:1.2!important}
+.jan-side-visuals .id-photo,
+.jan-side-visuals .passport-icon,
+.jan-side-visuals .certificate-icon{
+  width:28px!important;
+  height:34px!important;
+  min-width:28px!important;
+  font-size:14px!important;
+}
+.jan-side-visuals .passport-band{height:15px!important;margin:-7px -7px 8px!important}
+.jan-side-visuals .certificate-ribbon{
+  font-size:6px!important;
+  padding:4px 5px!important;
+  margin:-7px -7px 7px!important;
+}
+@media(max-width:1450px){
+  .jan-side-visuals{width:90px!important}
+  .jan-side-left{left:-96px!important}
+  .jan-side-right{right:-96px!important}
+}
+@media(max-width:1250px){
+  .jan-side-visuals{display:none!important}
+}
