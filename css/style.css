@@ -332,3 +332,52 @@ url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fi
 .services .container,.jan-seva .container,.website-plans .container,.csc-banking .container,.repair .container,.about .container,.contact .container,.location .container{position:relative;z-index:2}
 @media(max-width:900px){.lead-hero:before,.lead-hero:after{width:20%;opacity:.38}.section:before{background-size:20% 100%,20% 100%;opacity:.22}.section:after{background:linear-gradient(90deg,rgba(255,255,255,.35),rgba(255,255,255,.96) 20%,rgba(255,255,255,.96) 80%,rgba(255,255,255,.35))}}
 @media(max-width:700px){.lead-hero:before,.lead-hero:after,.section:before,.section:after{display:none}.services,.jan-seva,.website-plans,.csc-banking,.repair,.about,.contact,.location{background-color:#fff!important}}
+
+
+/* Full-page colorful visual treatment inspired by the supplied reference */
+:root{--ref-blue:#1262b3;--ref-cyan:#079fd2;--ref-red:#ef3b2d;--ref-orange:#f49a18;--ref-green:#159b59;--ref-purple:#6c2bbd}
+.section{position:relative;overflow:hidden;isolation:isolate}
+.section:before{content:"";position:absolute;inset:0;z-index:-2;opacity:.32;background-repeat:no-repeat;background-position:left center,right center;background-size:30% 100%,30% 100%;pointer-events:none;filter:saturate(1.18) contrast(1.02)}
+.section:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(248,251,254,.04) 0%,rgba(255,255,255,.74) 18%,rgba(255,255,255,.97) 34%,rgba(255,255,255,.97) 66%,rgba(255,255,255,.74) 82%,rgba(248,251,254,.04) 100%)}
+.services:before{background-image:url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=88"),url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=88")}
+.jan-seva:before{background-image:url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=88"),url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=88")}
+.website-plans:before{background-image:url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=88"),url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=88")}
+.csc-banking:before{background-image:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=88"),url("https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=88")}
+.repair:before{background-image:url("https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=900&q=88"),url("https://images.unsplash.com/photo-1593642532744-d377ab507dc8?auto=format&fit=crop&w=900&q=88")}
+.about:before{background-image:url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=88"),url("https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=88")}
+.contact:before{background-image:url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=88"),url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=88")}
+.location:before{background-image:url("https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=900&q=88"),url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=88")}
+/* Keep the middle content crisp while letting the work imagery show on both sides */
+.service-row,.jan-card,.plan-card,.repair-service-card,.contact-form,.feature-box,.about-card>div{background:rgba(255,255,255,.88);backdrop-filter:blur(2px);box-shadow:0 14px 32px rgba(18,58,99,.09)}
+.service-row:hover,.jan-card:hover,.plan-card:hover,.repair-service-card:hover{background:rgba(255,255,255,.94)}
+.service-row,.jan-card,.plan-card,.repair-service-card{border-color:rgba(201,218,233,.96)}
+/* Colorful section accents */
+.section-heading:after{background:linear-gradient(90deg,var(--ref-blue),var(--ref-cyan),var(--ref-red),var(--ref-orange));width:68px;height:4px}
+.section-heading.left:after{margin-left:0}
+.service-row:nth-child(1) .service-row-icon{background:#e7f3ff;color:var(--ref-blue)}
+.service-row:nth-child(2) .service-row-icon{background:#e8f8ef;color:var(--ref-green)}
+.service-row:nth-child(3) .service-row-icon{background:#fff0e5;color:var(--ref-orange)}
+.service-row:nth-child(4) .service-row-icon{background:#f2eaff;color:var(--ref-purple)}
+.service-row:nth-child(5) .service-row-icon{background:#e5f8fc;color:#008ead}
+.service-row:nth-child(6) .service-row-icon{background:#ffeded;color:var(--ref-red)}
+.jan-card:nth-child(5n+1){border-left:4px solid var(--ref-blue)}
+.jan-card:nth-child(5n+2){border-left:4px solid var(--ref-red)}
+.jan-card:nth-child(5n+3){border-left:4px solid var(--ref-green)}
+.jan-card:nth-child(5n+4){border-left:4px solid var(--ref-purple)}
+.jan-card:nth-child(5n){border-left:4px solid var(--ref-orange)}
+.plan-card.blue{border-left:4px solid var(--ref-blue)}.plan-card.purple{border-left:4px solid var(--ref-purple)}.plan-card.green{border-left:4px solid var(--ref-green)}.plan-card.orange{border-left:4px solid var(--ref-orange)}
+.plan-card.blue .plan-btn{background:linear-gradient(90deg,#1262b3,#078dc8)}.plan-card.purple .plan-btn{background:linear-gradient(90deg,#6c2bbd,#8b43e1)}.plan-card.green .plan-btn{background:linear-gradient(90deg,#159b59,#26b76f)}.plan-card.orange .plan-btn{background:linear-gradient(90deg,#f07b12,#f8a51d)}
+.repair-service-card:nth-child(4n+1){border-top:4px solid var(--ref-blue)}.repair-service-card:nth-child(4n+2){border-top:4px solid var(--ref-green)}.repair-service-card:nth-child(4n+3){border-top:4px solid var(--ref-orange)}.repair-service-card:nth-child(4n){border-top:4px solid var(--ref-purple)}
+.repair-card{box-shadow:0 25px 55px rgba(12,61,108,.18)}
+.feature-box{box-shadow:0 25px 55px rgba(16,63,119,.22)}
+.floating-actions{right:16px;left:auto}.floating-actions a{width:54px;height:54px;border:2px solid #fff}.float-call{background:linear-gradient(135deg,#1262b3,#078fd0)}.float-wa{background:linear-gradient(135deg,#159b59,#25c96a)}
+/* Make the hero itself more like a colorful service-business homepage */
+.lead-hero{background:
+linear-gradient(90deg,rgba(5,34,72,.88),rgba(7,61,111,.70) 48%,rgba(9,56,103,.77)),
+url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=88") center/cover no-repeat}
+.lead-hero:before{opacity:.82}.lead-hero:after{opacity:.86}
+.hero-kicker{color:#ffd31a}.hero-copy h1 span{color:#53d3ff}.consult-btn{background:linear-gradient(90deg,#ef3b2d,#ff633f)}.consult-btn:hover{background:#d93225}
+.hero-contact-card:first-child{border-left-color:#ffd31a}.hero-contact-card:nth-child(2){border-left-color:#ef3b2d}
+.trust-grid strong{background:linear-gradient(90deg,#1262b3,#ef3b2d);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media(max-width:900px){.section:before{background-size:21% 100%,21% 100%;opacity:.22}.section:after{background:linear-gradient(90deg,rgba(255,255,255,.32),rgba(255,255,255,.96) 20%,rgba(255,255,255,.96) 80%,rgba(255,255,255,.32))}}
+@media(max-width:700px){.section:before,.section:after{display:none}.services,.jan-seva,.website-plans,.csc-banking,.repair,.about,.contact,.location{background:#fff!important}}
