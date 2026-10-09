@@ -285,3 +285,50 @@ overflow:hidden}
 .floating-actions a{border:2px solid #fff}
 @media(max-width:900px){.section:before{background-size:19% auto,19% auto;opacity:.12}.section:after{background:linear-gradient(90deg,rgba(248,251,254,.45),rgba(255,255,255,.97) 18%,rgba(255,255,255,.97) 82%,rgba(248,251,254,.45))}}
 @media(max-width:700px){.section:before,.section:after{display:none}.services,.jan-seva,.website-plans,.csc-banking,.repair,.about,.contact,.location{background-color:#fff!important}}
+
+
+/* Colorful full-page business presentation inspired by the supplied reference */
+body{background:#f4f8fc}
+.utility-bar{background:linear-gradient(90deg,#0b3e78,#1c65b0,#0b3e78)}
+.header-main{min-height:92px}.main-header{background:#fff}
+.nav-bar{background:#fff;border-top:1px solid #e4ebf3;box-shadow:0 3px 12px rgba(20,55,90,.05)}
+.nav-inner a{color:#1b4778}.nav-inner a:hover{color:#e53224}.nav-inner a:after{background:linear-gradient(90deg,#1262b3,#ef3b2d)}
+.lead-hero{min-height:680px;background:
+linear-gradient(90deg,rgba(5,35,73,.83),rgba(6,55,105,.70) 48%,rgba(7,53,99,.74)),
+url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=2200&q=88") center/cover no-repeat}
+.lead-hero:before{content:"";position:absolute;left:0;top:0;bottom:0;width:28%;background:linear-gradient(90deg,rgba(17,97,175,.18),rgba(17,97,175,.02)),url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=86") left center/cover no-repeat;opacity:.72;mix-blend-mode:screen;pointer-events:none}
+.lead-hero:after{content:"";position:absolute;right:0;top:0;bottom:0;width:30%;background:linear-gradient(270deg,rgba(12,102,184,.18),rgba(12,102,184,.01)),url("https://images.unsplash.com/photo-1593642632559-0c6d3fc2d7c5?auto=format&fit=crop&w=900&q=86") right center/cover no-repeat;opacity:.78;mix-blend-mode:screen;pointer-events:none}
+.hero-layout{min-height:680px}.hero-copy{max-width:690px}.hero-kicker{color:#ffd21b;letter-spacing:1.2px}.hero-copy h1{font-size:clamp(43px,5vw,69px);text-shadow:0 4px 25px rgba(0,0,0,.18)}.hero-copy h1 span{color:#52d4ff}.hero-description{border-top-color:rgba(255,255,255,.38)}
+.consult-card{background:linear-gradient(155deg,#0f5ca5,#1e6db7 65%,#0e4a88);border:1px solid rgba(255,255,255,.15);box-shadow:0 30px 70px rgba(0,0,0,.28)}.consult-card h2{color:#fff}.consult-btn{background:linear-gradient(90deg,#ef3b2d,#ff5b3d);box-shadow:0 12px 25px rgba(239,59,45,.25)}.consult-btn:hover{background:#d93225}
+.hero-contact-card{border-left:4px solid #ffd21b}.hero-contact-card:nth-child(2){border-left-color:#ef3b2d}.contact-card-icon{background:linear-gradient(135deg,#0d62b0,#1d8fe0)}
+.trust-strip{background:linear-gradient(90deg,#fff,#f5faff,#fff)}.trust-grid strong{background:linear-gradient(90deg,#1262b3,#08a6d9);-webkit-background-clip:text;background-clip:text;color:transparent}
+.section{position:relative;overflow:hidden}.section:before{opacity:.34;background-repeat:no-repeat;background-size:30% 100%,30% 100%;background-position:left center,right center;filter:saturate(1.15) contrast(1.02)}
+.section:after{background:linear-gradient(90deg,rgba(244,248,252,.02) 0%,rgba(255,255,255,.80) 21%,rgba(255,255,255,.98) 34%,rgba(255,255,255,.98) 66%,rgba(255,255,255,.80) 79%,rgba(244,248,252,.02) 100%)}
+.services:before{background-image:url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=950&q=88"),url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=950&q=88")}
+.jan-seva:before{background-image:url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=950&q=88"),url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=950&q=88")}
+.website-plans:before{background-image:url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=950&q=88"),url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=950&q=88")}
+.csc-banking:before{background-image:url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=950&q=88"),url("https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=950&q=88")}
+.repair:before{background-image:url("https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=950&q=88"),url("https://images.unsplash.com/photo-1593642532744-d377ab507dc8?auto=format&fit=crop&w=950&q=88")}
+.about:before{background-image:url("https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=950&q=88"),url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=950&q=88")}
+.contact:before{background-image:url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=950&q=88"),url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=950&q=88")}
+.location:before{background-image:url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=950&q=88"),url("https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=950&q=88")}
+.service-row,.jan-card,.plan-card,.repair-service-card,.contact-form,.feature-box,.about-card>div{background:rgba(255,255,255,.86);box-shadow:0 14px 30px rgba(18,58,99,.09)}
+.service-row:hover,.jan-card:hover,.plan-card:hover,.repair-service-card:hover{background:rgba(255,255,255,.93)}
+.service-row,.jan-card,.plan-card,.repair-service-card{border-color:rgba(198,215,230,.95)}
+.service-row:nth-child(3) .service-row-icon,.repair-service-card:nth-child(4n+2) .repair-service-icon{box-shadow:0 0 0 6px rgba(239,59,45,.06)}
+.jan-card:nth-child(4n+2),.plan-card.purple{border-left:4px solid #6c2bbd}.jan-card:nth-child(4n+3),.plan-card.green{border-left:4px solid #149b59}.jan-card:nth-child(4n),.plan-card.orange{border-left:4px solid #f49a18}.jan-card:nth-child(4n+1),.plan-card.blue{border-left:4px solid #1262b3}
+.jan-tools{background:rgba(255,255,255,.58);padding:10px;border-radius:12px;border:1px solid rgba(202,218,232,.7)}
+.filter-btn.active,.jan-filter.active{background:linear-gradient(90deg,#1262b3,#0a83c6);border-color:#1262b3}
+.plan-card.purple .plan-price,.plan-card.purple .plan-btn{color:#6c2bbd}.plan-card.purple .plan-btn{color:#fff}
+.add-on-bar{background:linear-gradient(90deg,#eff7ff,#fff5e8);border-color:#dbe7f1}.add-on-grid>div:nth-child(1){border-top:3px solid #1262b3}.add-on-grid>div:nth-child(2){border-top:3px solid #149b59}.add-on-grid>div:nth-child(3){border-top:3px solid #6c2bbd}.add-on-grid>div:nth-child(4){border-top:3px solid #ef3b2d}
+.feature-box{background:linear-gradient(145deg,#0d4f8f,#176cb5);border:0}.solid-btn{background:linear-gradient(90deg,#1262b3,#168ad0)}.solid-btn:hover{background:#0d4f8f}
+.repair-card{background:linear-gradient(135deg,#1262b3,#0b376d)}.repair-card.dark-green{background:linear-gradient(135deg,#149b59,#0b6443)}
+.about-card>div:nth-child(1){border-top:4px solid #1262b3}.about-card>div:nth-child(2){border-top:4px solid #6c2bbd}.about-card>div:nth-child(3){border-top:4px solid #ef3b2d}.about-card>div:nth-child(4){border-top:4px solid #149b59}
+.contact-form{border-top:5px solid #ef3b2d}.contact-form button{background:linear-gradient(90deg,#ef3b2d,#ff6a3d)}.contact-form button:hover{background:#d93225}
+.map-button{background:#fff;border-left:4px solid #ef3b2d}
+.site-footer{background:linear-gradient(135deg,#071f40,#0b467f)}.footer-brand span{color:#ffd21b}.footer-bottom{background:rgba(0,0,0,.16)}
+.floating-actions{left:auto;right:16px}.floating-actions a{width:54px;height:54px}.float-call{background:linear-gradient(135deg,#1262b3,#168ad0)}.float-wa{background:linear-gradient(135deg,#16a94e,#23c968)}
+/* Decorative side labels for a richer full-page feel */
+.services .container,.jan-seva .container,.website-plans .container,.csc-banking .container,.repair .container,.about .container,.contact .container,.location .container{position:relative;z-index:2}
+@media(max-width:900px){.lead-hero:before,.lead-hero:after{width:20%;opacity:.38}.section:before{background-size:20% 100%,20% 100%;opacity:.22}.section:after{background:linear-gradient(90deg,rgba(255,255,255,.35),rgba(255,255,255,.96) 20%,rgba(255,255,255,.96) 80%,rgba(255,255,255,.35))}}
+@media(max-width:700px){.lead-hero:before,.lead-hero:after,.section:before,.section:after{display:none}.services,.jan-seva,.website-plans,.csc-banking,.repair,.about,.contact,.location{background-color:#fff!important}}
