@@ -577,54 +577,6 @@
 <script src="js/script.js"></script>
 
 
-<div class="auth-modal" id="authModal" aria-hidden="true">
-  <div class="auth-backdrop" data-auth-close></div>
-  <section class="auth-panel" role="dialog" aria-modal="true" aria-labelledby="authTitle">
-    <button class="auth-close" type="button" aria-label="Close" data-auth-close>×</button>
-    <div class="auth-brand">
-      <div class="auth-logo-mark">DC</div>
-      <div><b>DIGITAL CYBER CAFE</b><small>JAN SEVA KENDRA • CUSTOMER ACCOUNT</small></div>
-    </div>
-    <div class="auth-tabs">
-      <button type="button" class="auth-tab active" data-auth-tab="login">Login</button>
-      <button type="button" class="auth-tab" data-auth-tab="signup">Sign Up</button>
-    </div>
-
-    <form id="loginForm" class="auth-form">
-      <div class="auth-title"><span>WELCOME BACK</span><h2 id="authTitle">Customer Login</h2><p>Apni services, enquiries aur profile ko manage karein.</p></div>
-      <label>Email or Mobile<input id="loginIdentity" type="text" autocomplete="username" placeholder="Email address or mobile number" required></label>
-      <label>Password<div class="password-wrap"><input id="loginPassword" type="password" autocomplete="current-password" placeholder="Enter password" required><button type="button" class="password-toggle" data-password-target="loginPassword">Show</button></div></label>
-      <label class="remember-row"><input id="rememberMe" type="checkbox"> <span>Remember me on this device</span></label>
-      <button class="auth-submit" type="submit">LOGIN TO MY ACCOUNT →</button>
-      <div id="loginMessage" class="auth-message" aria-live="polite"></div>
-      <p class="auth-switch">New customer? <button type="button" data-auth-tab="signup">Create an account</button></p>
-    </form>
-
-    <form id="signupForm" class="auth-form hidden">
-      <div class="auth-title"><span>GET STARTED</span><h2>Customer Sign Up</h2><p>Account banाकर enquiry aur service requests ko manage karein.</p></div>
-      <label>Full Name<input id="signupName" type="text" autocomplete="name" placeholder="Your full name" required></label>
-      <label>Mobile Number<input id="signupPhone" type="tel" autocomplete="tel" placeholder="10-digit mobile number" required></label>
-      <label>Email Address<input id="signupEmail" type="email" autocomplete="email" placeholder="you@example.com" required></label>
-      <label>Password<div class="password-wrap"><input id="signupPassword" type="password" autocomplete="new-password" placeholder="Create password" required><button type="button" class="password-toggle" data-password-target="signupPassword">Show</button></div></label>
-      <label>Confirm Password<input id="signupConfirm" type="password" autocomplete="new-password" placeholder="Re-enter password" required></label>
-      <label class="remember-row"><input id="signupTerms" type="checkbox" required> <span>I agree to use this customer account for Digital Cyber Cafe services.</span></label>
-      <button class="auth-submit" type="submit">CREATE CUSTOMER ACCOUNT →</button>
-      <div id="signupMessage" class="auth-message" aria-live="polite"></div>
-      <p class="auth-switch">Already registered? <button type="button" data-auth-tab="login">Login here</button></p>
-    </form>
-
-    <div class="customer-session hidden" id="customerSession">
-      <div class="session-avatar" id="sessionAvatar">DC</div>
-      <h2 id="sessionTitle">Welcome!</h2>
-      <p id="sessionText">You are logged in on this device.</p>
-      <div class="session-actions">
-        <a href="#services" data-auth-close>View Services</a>
-        <a href="#contact" data-auth-close>Send Enquiry</a>
-      </div>
-      <button class="auth-logout" id="logoutBtn" type="button">LOG OUT</button>
-    </div>
-  </section>
-</div>
 
 </body>
 </html>
