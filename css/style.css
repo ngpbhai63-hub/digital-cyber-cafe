@@ -1051,3 +1051,20 @@ radial-gradient(circle at 92% 50%,rgba(239,59,45,.07),transparent 28%)!important
 .auth-logout{border:0;background:#ef3b2d;color:#fff;border-radius:8px;padding:11px 18px;font-size:10px;font-weight:900;cursor:pointer}
 @media(max-width:1250px){.customer-login-slot{display:none}}
 @media(max-width:650px){.auth-panel{padding:18px;border-radius:16px}.auth-title h2{font-size:23px}.session-actions{grid-template-columns:1fr}}
+
+/* Customer Login button in navigation */
+.customer-login-slot{display:none!important}
+.nav-inner .customer-login-btn{margin-left:8px;white-space:nowrap}
+@media(max-width:1250px){
+  .nav-inner .customer-login-btn{display:block!important;margin-left:6px;padding:9px 11px;font-size:10px}
+}
+@media(max-width:1050px){
+  .nav-inner .customer-login-btn{width:100%;margin:4px 0 0}
+}
+@media(max-width:900px){
+  .nav-inner .customer-login-btn{width:auto;margin:5px 0}
+}
+@media(max-width:650px){
+  .nav-inner .customer-login-btn{font-size:10px;padding:8px 10px}
+}
+body.auth-open{overflow:hidden}
