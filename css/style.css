@@ -188,3 +188,30 @@ overflow:hidden}
 .software-note{margin-top:22px;padding:13px 15px;border:1px solid #f1d99c;background:#fffaf0;border-radius:9px;color:#665219;font-size:12px;line-height:1.6}
 @media(max-width:1000px){.repair-service-grid{grid-template-columns:repeat(2,1fr)}.repair-hero-grid{grid-template-columns:1fr}.repair-highlight>a{margin-left:0}}
 @media(max-width:650px){.repair-service-grid{grid-template-columns:1fr}.repair-highlight{padding:22px}.repair-highlight h3{font-size:24px}.repair-highlight>a{width:100%;text-align:center}.repair-checklist{padding:8px}}
+
+
+/* Service background imagery - subtle, readable overlays */
+.services,.jan-seva,.website-plans,.repair{position:relative;isolation:isolate;background-position:center;background-size:cover;background-attachment:fixed}
+.services:before,.jan-seva:before,.website-plans:before,.repair:before{content:"";position:absolute;inset:0;z-index:-1;background-position:center;background-size:cover;background-repeat:no-repeat;opacity:.12;pointer-events:none}
+.services:before{background-image:url("https://images.unsplash.com/photo-1758876201660-103984519266?auto=format&fit=crop&w=1800&q=78")}
+.jan-seva:before{background-image:url("https://images.unsplash.com/photo-1758876201660-103984519266?auto=format&fit=crop&w=1800&q=78")}
+.website-plans:before{background-image:url("https://images.unsplash.com/photo-1778146476147-5f8d4bd03c79?auto=format&fit=crop&w=1800&q=78")}
+.repair:before{background-image:url("https://images.unsplash.com/photo-1778146476147-5f8d4bd03c79?auto=format&fit=crop&w=1800&q=78")}
+.service-row,.jan-card,.plan-card,.repair-service-card{position:relative;overflow:hidden}
+.service-row:after,.jan-card:after,.plan-card:after,.repair-service-card:after{content:"";position:absolute;inset:0;background-position:right bottom;background-repeat:no-repeat;background-size:220px auto;opacity:.075;pointer-events:none;z-index:0}
+.service-row>* ,.jan-card>* ,.plan-card>* ,.repair-service-card>*{position:relative;z-index:1}
+.service-row:after{background-image:url("https://images.unsplash.com/photo-1648949300454-143ad1f9d6c2?auto=format&fit=crop&w=900&q=70")}
+.jan-card[data-jan-category="id"]:after{background-image:url("https://images.unsplash.com/photo-1758876201660-103984519266?auto=format&fit=crop&w=900&q=70")}
+.jan-card[data-jan-category="certificate"]:after{background-image:url("https://images.unsplash.com/photo-1758876201660-103984519266?auto=format&fit=crop&w=900&q=70")}
+.jan-card[data-jan-category="scheme"]:after{background-image:url("https://images.unsplash.com/photo-1758876201660-103984519266?auto=format&fit=crop&w=900&q=70")}
+.jan-card[data-jan-category="education"]:after{background-image:url("https://images.unsplash.com/photo-1758876201660-103984519266?auto=format&fit=crop&w=900&q=70")}
+.jan-card[data-jan-category="payment"]:after{background-image:url("https://images.unsplash.com/photo-1613395450289-e560907d9308?auto=format&fit=crop&w=900&q=70")}
+.jan-card[data-jan-category="travel"]:after{background-image:url("https://images.unsplash.com/photo-1758876201660-103984519266?auto=format&fit=crop&w=900&q=70")}
+.plan-card:after{background-image:url("https://images.unsplash.com/photo-1778146476147-5f8d4bd03c79?auto=format&fit=crop&w=900&q=70")}
+.repair-service-card:after{background-image:url("https://images.unsplash.com/photo-1566728595340-a0484f0494e8?auto=format&fit=crop&w=900&q=70")}
+.repair-service-card:nth-child(2):after,.repair-service-card:nth-child(3):after,.repair-service-card:nth-child(4):after{background-image:url("https://images.unsplash.com/photo-1778146476147-5f8d4bd03c79?auto=format&fit=crop&w=900&q=70")}
+.repair-service-card:nth-child(5):after,.repair-service-card:nth-child(6):after{background-image:url("https://images.unsplash.com/photo-1566728595340-a0484f0494e8?auto=format&fit=crop&w=900&q=70")}
+.repair-service-card:nth-child(7):after,.repair-service-card:nth-child(8):after,.repair-service-card:nth-child(9):after,.repair-service-card:nth-child(10):after,.repair-service-card:nth-child(11):after,.repair-service-card:nth-child(12):after{background-image:url("https://images.unsplash.com/photo-1613395450289-e560907d9308?auto=format&fit=crop&w=900&q=70")}
+.repair-service-card:hover:after,.jan-card:hover:after,.plan-card:hover:after,.service-row:hover:after{opacity:.12;transform:scale(1.03);transition:.35s ease}
+.service-row,.jan-card,.plan-card,.repair-service-card{background-color:rgba(255,255,255,.96);backdrop-filter:blur(1px)}
+@media(max-width:900px){.services,.jan-seva,.website-plans,.repair{background-attachment:scroll}.services:before,.jan-seva:before,.website-plans:before,.repair:before{opacity:.08}}
