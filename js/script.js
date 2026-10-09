@@ -38,10 +38,11 @@ if(heroForm){
     const phone=document.getElementById("heroPhone").value.replace(/\D/g,"");
     const city=document.getElementById("heroCity").value.trim();
     const service=document.getElementById("heroService").value;
+    const message=document.getElementById("heroMessageInput")?.value.trim();
     if(name.length<2){heroMessage.textContent="Please enter your full name.";return}
     if(phone.length<10){heroMessage.textContent="Please enter a valid mobile number.";return}
     if(!service){heroMessage.textContent="Please select a service.";return}
-    openWhatsApp({name,email,phone,city,service});
+    openWhatsApp({name,email,phone,city,service,message});
     heroMessage.textContent="Opening WhatsApp...";
     heroForm.reset();
   });
