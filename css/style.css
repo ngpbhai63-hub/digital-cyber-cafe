@@ -849,3 +849,99 @@ radial-gradient(circle at 92% 50%,rgba(239,59,45,.07),transparent 28%)!important
   .jan-card--visual>a{grid-column:2;justify-self:start}
   .thumb-photo span{width:38px;height:38px;font-size:20px}
 }
+
+/* ===== FINAL JAN SEVA LAYOUT: clean side visuals + readable service cards ===== */
+.jan-seva>.container{max-width:1400px!important;position:relative}
+.jan-seva>.container:before,.jan-seva>.container:after{display:none!important}
+.jan-seva .section-heading,
+.jan-seva .jan-intro,
+.jan-seva .jan-tools,
+.jan-seva .jan-grid,
+.jan-seva .jan-disclaimer{width:min(1060px,100%);margin-left:auto;margin-right:auto}
+.jan-seva .section-heading{margin-bottom:25px}
+.jan-seva .jan-intro{margin-bottom:18px}
+.jan-seva .jan-tools{margin-bottom:22px}
+.jan-seva .jan-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.jan-card--visual{
+  grid-template-columns:128px minmax(0,1fr) auto!important;
+  min-height:150px!important;
+  padding:12px!important;
+  gap:14px!important;
+  background:#fff!important;
+  background-image:none!important;
+  border:1px solid #d7e3ee!important;
+  box-shadow:0 10px 22px rgba(18,58,99,.07)!important;
+}
+.jan-card--visual:hover{background:#fff!important}
+.jan-card--visual .service-thumb{
+  width:128px!important;
+  height:124px!important;
+  border-radius:11px!important;
+  box-shadow:0 8px 17px rgba(18,58,99,.12)!important;
+}
+.jan-card--visual .thumb-photo:after{
+  background:linear-gradient(180deg,rgba(15,48,79,.02) 35%,rgba(5,37,67,.62) 100%)!important;
+}
+.jan-card--visual .thumb-caption b{font-size:10px!important}
+.jan-card--visual .thumb-caption small{font-size:8px!important}
+.jan-card--visual .jan-icon{display:none!important}
+.jan-card--visual>div:nth-child(2){min-width:0}
+.jan-card--visual h3{font-size:17px!important;margin-bottom:6px!important}
+.jan-card--visual p{font-size:12px!important;line-height:1.52!important;color:#5d7186!important}
+.jan-card--visual>a{
+  background:#edf6fd!important;
+  border:1px solid #d6e6f2!important;
+  padding:9px 8px!important;
+  border-radius:8px!important;
+  color:#0c5d9f!important;
+}
+.jan-side-visuals{
+  top:425px!important;
+  width:190px!important;
+  gap:12px!important;
+  z-index:4!important;
+}
+.jan-side-left{left:10px!important}.jan-side-right{right:10px!important}
+.side-visual-head{border-radius:12px!important}
+.id-visual{
+  min-height:118px!important;
+  background:rgba(255,255,255,.98)!important;
+}
+.id-visual .id-body strong{font-size:11px!important}
+.id-visual .id-body small,.id-visual .id-body em{font-size:8px!important}
+.jan-side-left .id-aadhaar .id-photo{
+  background-image:url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=300&q=85");
+  background-size:cover;background-position:center;
+}
+.jan-side-left .id-pan .id-photo{
+  background-image:url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=300&q=85");
+  background-size:cover;background-position:center;
+}
+.jan-side-right .id-voter .id-photo{
+  background-image:url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=300&q=85");
+  background-size:cover;background-position:center;
+}
+.jan-side-right .id-form .id-photo{
+  background-image:url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=300&q=85");
+  background-size:cover;background-position:center;
+}
+@media(max-width:1380px){
+  .jan-seva>.container{max-width:1320px!important}
+  .jan-seva .section-heading,.jan-seva .jan-intro,.jan-seva .jan-tools,.jan-seva .jan-grid,.jan-seva .jan-disclaimer{width:min(1040px,100%)}
+  .jan-side-visuals{width:175px!important}.jan-side-left{left:4px!important}.jan-side-right{right:4px!important}
+  .jan-card--visual{grid-template-columns:118px minmax(0,1fr) auto!important}
+  .jan-card--visual .service-thumb{width:118px!important}
+}
+@media(max-width:1160px){
+  .jan-side-visuals{display:none!important}
+  .jan-seva .section-heading,.jan-seva .jan-intro,.jan-seva .jan-tools,.jan-seva .jan-grid,.jan-seva .jan-disclaimer{width:100%}
+}
+@media(max-width:900px){
+  .jan-seva .jan-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+  .jan-seva .jan-grid{grid-template-columns:1fr}
+  .jan-card--visual{grid-template-columns:92px 1fr!important;min-height:132px!important}
+  .jan-card--visual .service-thumb{width:92px!important;height:104px!important}
+  .jan-card--visual>a{grid-column:2;justify-self:start}
+}
